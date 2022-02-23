@@ -1,0 +1,76 @@
+.nav
+  &-tabs
+    flex-direction: column
+    border: none
+
+  &-item
+    width: 100%
+    margin-bottom: 5px
+
+    &:last-child
+      margin-bottom: 0
+
+    .nav
+      &-link
+        color: $black
+        background: #F8F9FA
+        border: 1px solid #F3F3F3
+        border-radius: 4px
+        padding: 22px 30px
+        font-weight: 500
+        margin-bottom: 0
+        width: 100%
+        text-align: left
+
+        &:hover, &:focus
+          border-color: $green
+
+        &.active
+          border: 1px solid $green
+          color: $black
+          background-color: #fff
+
+
+
+.blueprint
+  display: flex
+  justify-content: space-between
+  position: relative
+
+  @media (max-width: 767px)
+    flex-direction: column
+
+  .tab
+    &-content
+      margin-bottom: 90px
+      @media (max-width: 767px)
+        margin-bottom: 30px
+
+
+  &-tabs
+    width: 610px
+    @media (max-width: 1300px)
+      width: 50%
+    @media (max-width: 767px)
+      width: 100%
+      order: 2
+
+  &-content
+    width: 610px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+
+
+    @media (max-width: 1300px)
+      width: 50%
+    @media (max-width: 767px)
+      width: 100%
+      order: 1
+      margin-bottom: 30px
+
+    > button
+      @media (max-width: 767px)
+        position: absolute
+        bottom: -75px
+        width: 100%

@@ -1,0 +1,188 @@
+html, body
+    width: 100%
+
+@for $i from -100 through 200
+    .m-#{$i}
+        margin: $i+px !important
+
+    .mt-#{$i}
+        margin-top: $i+px !important
+
+    .mb-#{$i}
+        margin-bottom: $i+px !important
+
+    .ml-#{$i}
+        margin-left: $i+px !important
+
+    .mr-#{$i}
+        margin-right: $i+px !important
+
+    .p-#{$i}
+        padding: $i+px !important
+
+    .pt-#{$i}
+        padding-top: $i+px !important
+
+    .pb-#{$i}
+        padding-bottom: $i+px !important
+
+    .pl-#{$i}
+        padding-left: $i+px !important
+
+    .pr-#{$i}
+        padding-right: $i+px !important
+
+    .py-#{$i}
+        padding-top: $i+px !important
+        padding-bottom: $i+px !important
+
+    .px-#{$i}
+        padding-left: $i+px !important
+        padding-right: $i+px !important
+
+    .height-#{$i}
+        height: $i+px
+
+.container
+    max-width: 1300px
+    margin: 0 auto
+    &.w-960
+        max-width: 960px
+        @media (max-width: 1000px)
+            max-width: 100%
+
+    @media (max-width: 1300px)
+        max-width: 100%
+        padding:
+            left: 15px !important
+            right: 15px !important
+
+.d
+    &-flex
+        display: flex
+    &-grid
+        display: grid
+    &-block
+        display: block
+    &-inline
+        display: inline
+    &-if
+        display: inline-flex
+
+.align-items
+    &-center
+        align-items: center
+    &-start
+        align-items: start
+
+.justify-content
+    &-between
+        justify-content: space-between
+
+.flex
+    &-column
+        flex-direction: column
+
+
+
+.align-vert
+    display: flex
+    flex-direction: column
+    justify-content: space-around
+    height: 100%
+
+    @media (max-width: 1300px)
+        justify-content: flex-start
+
+.grid
+    &-1
+        grid-template-columns: 1fr
+    &-2
+        grid-template-columns: 1fr 1fr
+    &-3
+        grid-template-columns: 1fr 1fr 1fr
+
+.overflow-hidden
+    overflow-x: hidden
+    overflow-y: hidden
+    padding-right: var(--scrollBar) 
+    @media (max-width: 1023px)
+        padding-right: 0
+
+.touchevents
+    .overflow-hidden
+        overflow-x: hidden
+        overflow-y: hidden
+    &.overflow-hidden
+        overflow-x: hidden
+        overflow-y: hidden
+        position: static
+
+.w-100p
+    width: 100%
+
+.mx-auto
+    margin: 0 auto
+
+.color
+    &-white
+        color: $white
+    &-black
+        color: $black
+    &-green
+        color: $green
+    &-greySec
+        color: $greySec
+
+.fw
+    &-400
+        font-weight: 400 !important
+    &-500
+        font-weight: 500 !important
+    &-bold
+        font-weight: bold !important
+
+
+.border-none
+    border: none !important
+
+
+// TEMPORARY STYLES
+// NEED MOVE 
+
+
+a
+    &:hover
+        color: $green
+
+
+.pay-method 
+    display: flex
+    justify-content: space-between
+    &-item
+        font-size: 32px
+        margin-right: 20px
+        display: flex
+        align-items: center
+        &:last-child
+            margin: 0
+
+.social
+    display: flex
+    align-items: center
+    &--black
+        svg
+            path
+                fill: $blackSec 
+    &-item
+        margin-right: 30px
+        display: flex
+        &:last-child
+            margin-right: 0
+        a
+            font-size: 20px
+            display: flex
+            &:hover
+                svg
+                    color: $green
+

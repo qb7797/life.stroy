@@ -1,0 +1,2770 @@
+.app
+  overflow: hidden
+
+.section
+  position: relative
+
+  &.bg
+    &--grey
+      background-color: #e8e8e8
+
+  .hide-desktop
+    display: none
+    @media (max-width: 1300px)
+      display: block
+
+  .text
+    &-center
+      text-align: center
+    &-left
+      text-align: left
+    &-right
+      text-align: right
+
+  h2
+    font-weight: 500
+    font-size: 42px
+    line-height: 1.3
+    text-align: center
+    letter-spacing: 0.01em
+    text-align: center
+    margin-bottom: 60px
+    overflow: hidden
+
+    @media (max-width: 1300px)
+      font-size: 24px
+      line-height: 1.3
+      margin-bottom: 30px
+
+    @media (min-width: 1300px)
+      &.pos-text-center
+        position: absolute
+        width: 1300px
+        z-index: -1
+
+  h3
+    font-weight: 500
+    font-size: 36px
+    line-height: 1.3
+    letter-spacing: 0.01em
+    margin-bottom: 45px
+    @media (max-width: 1300px)
+      font-size: 24px
+
+  .header-block
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+    @media (max-width: 1300px)
+      display: block
+      text-align: left
+      margin-bottom: 30px !important
+
+      p.category
+        margin-bottom: 20px
+
+    h2
+      margin-bottom: 0
+
+      @media (max-width: 1300px)
+        text-align: left
+        margin-bottom: 30px
+
+    button
+      @media (max-width: 1300px)
+        position: absolute
+        bottom: 40px
+        left: 50%
+        margin-left: -113px
+
+  p.category
+    @include subHeader
+    @media (max-width: 1300px)
+      font-size: 14px
+
+    &.color-white
+      color: $white
+    &.color-black
+      color: $black
+    &.color-grey
+      color: $grey
+
+  .social-block
+    display: flex
+
+    &-item
+      margin-left: 30px
+      a
+        display: block
+
+      &:first-child
+        margin-left: 0
+
+  .map
+
+    &-block
+      height: 550px
+
+      @media (max-width: 1300px)
+        height: 440px
+
+  &.contact
+    padding: 80px 0 130px
+
+    @media (max-width: 1300px)
+      padding: 80px 0
+
+    .contact
+      &-block
+        display: flex
+        justify-content: space-between
+        margin-bottom: 100px
+
+        p
+          color: $blackSec
+
+        @media (max-width: 1300px)
+          flex-direction: column
+          margin-bottom: 0
+
+        div
+          &:nth-child(1)
+            width: 420px
+          &:nth-child(2)
+            width: 350px
+          @media (max-width: 1300px)
+            margin-bottom: 70px
+            &:nth-child(1)
+              width: 100%
+            &:nth-child(2)
+              width: 100%
+
+        h4
+          @include h4
+          font-weight: 500
+          margin-bottom: 45px
+
+          @media (max-width: 1300px)
+            margin-bottom: 40px
+
+        .data-block
+          margin-bottom: 55px
+          &:last-child
+            margin-bottom: 0
+
+        .data
+          font-weight: normal
+          font-size: 24px
+          line-height: 26px
+          letter-spacing: 0.02em
+          color: $black
+
+          &:hover
+            color: $green
+
+      &-photo
+        display: flex
+        justify-content: space-between
+        flex-wrap: nowrap
+
+        @media (max-width: 1300px)
+          overflow-x: scroll
+          display: -webkit-box
+
+        &-item
+          width: 205px
+          margin-right: 30px
+          &:last-child
+            margin-right: 0
+          img
+            height: 100%
+            object-fit: cover
+
+          @media (max-width: 1300px)
+            width: 160px
+
+  &.callback
+    background-color: $green
+    padding: 130px 0
+    background-repeat: no-repeat
+    background-size: cover
+
+    @media (max-width: 1300px)
+      padding: 80px 0
+
+    &--black
+      background-color: $black
+    &--transparent
+      background-color: transparent
+    &--grey
+      background-color: #E8E8E8
+      &.callback
+        .title, .description
+          color: $black
+        
+        .form
+          &-group > label
+            color: $blackSec
+          &-control
+            color: $black
+            &:focus
+              border-color: $grey
+          &-check
+            &-input
+              color: #949494
+            &-label
+              color: $blackSec
+    &--inner
+      @media (max-width: 1300px)
+        padding: 60px 0
+
+      .btn-white
+        background-color: $green
+        color: $white
+
+    .callback
+      &-block
+        display: flex
+        justify-content: space-between
+
+        .show-mobile
+          display: none
+          @media (max-width: 1300px)
+            display: block
+          @media (max-width: 430px)
+            width: 100%
+
+        .bg-white
+          background: $white
+          padding: 70px 35px
+          border-radius: 4px
+
+          @media (max-width: 1300px)
+            display: none
+
+        @media (max-width: 1300px)
+          flex-direction: column
+
+        &-heading
+          width: 435px
+          @media (max-width: 440px)
+            width: 100%
+
+          &.w-605
+            width: 605px
+
+            @media (max-width: 1300px)
+              width: 100%
+
+          &.pt-110
+            @media (max-width: 1300px)
+              padding-top: 0 !important
+
+    .form
+      width: 420px
+      margin-right: 110px
+
+      @media (max-width: 1300px)
+        width: 100%
+        margin-right: 0
+
+    .title
+      color: $white
+      font-size: 36px
+      font-weight: 500
+      letter-spacing: 0.01em
+      line-height: 1.2
+      margin-bottom: 35px
+
+      &.color-black
+        color: $black
+
+      @media (max-width: 1300px)
+        font-size: 24px
+
+    .description
+      color: $grey
+      font-size: 16px
+      line-height: 1.625
+      letter-spacing: 0.02em
+
+      &.color-black
+        color: $black
+
+      @media (max-width: 1300px)
+        margin-bottom: 50px
+
+    .form
+      .btn
+        width: 160px
+        padding: 16px 53px
+
+        @media (max-width: 425px)
+          width: 100%
+
+  &.top
+    padding-top: 97px
+    height: 100vh
+    overflow: hidden
+
+    @media (max-width: 1300px)
+      padding-top: 87px
+
+    &::before
+      content: ''
+      position: absolute
+      z-index: 0
+      top: -97px
+      width: 100%
+      height: calc( 100vh + 97px )
+      background-color: rgba(0, 0, 0, 0.5)
+
+      @media (max-width: 1300px)
+        top: -87px
+        height: calc( 100vh + 87px )
+
+    .container
+      position: relative
+      z-index: 8
+      height: 100%
+
+      &.align-center
+        display: flex
+        flex-direction: column
+        height: calc(100% - 97px)
+        justify-content: center
+
+        @media (max-width: 1300px)
+          height: calc(100% - 87px)
+
+        &.h200
+          @media (max-width: 767px)
+            height: calc(100% - 200px)
+
+    .rc-advantages
+      display: flex
+      position: relative
+      top: -70px
+      @media (max-width: 767px)
+        flex-direction: column
+        top: -110px
+
+      &-item
+        display: flex
+        flex-direction: column
+        width: 240px
+        margin-right: 90px
+        &:last-child
+          margin-right: 0
+
+        svg
+          margin-bottom: 20px
+          @media (max-width: 400px)
+            max-width: 50px
+            height: 50px
+            width: 100%
+
+
+
+        span
+          color: $white
+          font-weight: 500
+          font-size: 12px
+          line-height: 1.7
+          letter-spacing: 0.05em
+          text-transform: uppercase
+        @media (max-width: 767px)
+          width: 100%
+          margin-right: 0
+          flex-direction: row
+          align-items: center
+          margin-bottom: 15px
+          &:last-child
+            margin-bottom: 0
+          svg
+            margin-right: 10px
+            margin-bottom: 0
+
+
+    .heading
+
+      @media (max-width: 1300px)
+        margin-bottom: 15px
+
+      &.center
+        height: 100%
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        padding: 70px 0 50px
+
+
+      .adress
+        display: flex
+        align-items: center
+        color: $white
+        font-size: 14px
+        line-height: 13px
+        letter-spacing: 0.05em
+
+
+      .buttons
+        display: flex
+        gap: 20px
+
+      .tags
+        span
+          pointer-events: none
+          color: rgba($white, .5)
+          border-color: rgba($white, .5)
+
+      .line
+        height: 2px
+        width: 99.75%
+        background-color: $white
+        margin-top: 30px
+        transition: width-animation
+        animation-name: width-animation
+        animation-duration: 2s
+        animation-timing-function: ease-in-out
+
+        @keyframes width-animation 
+          0%
+            width: 0%
+          100%
+            width: 95%
+
+        @media (max-width: 1300px)
+          display: none
+
+      &--no-border
+        border-bottom: none
+
+      h1
+        font-weight: 500
+        font-size: 72px
+        line-height: 1.2
+        color: $white
+        text-transform: uppercase
+        letter-spacing: 0.02em
+        margin-bottom: 10px
+        transform: translateY(0)
+        overflow: hidden
+        transition: tranY-animate
+        animation-name: tranY-animate
+        animation-duration: 1s
+        animation-timing-function: linear
+        &.title
+          @include h1
+          color: $white
+          text-transform: none
+
+        @keyframes tranY-animate 
+          0%
+            opacity: 0
+            transform: translateY(100px)
+
+          100%
+            opacity: 1
+            transform: translateY(0)
+
+        @media (max-width: 1300px)
+          font-size: 32px
+          line-height: 1.3
+
+      h2
+        @include h2
+        color: $white
+        text-align: left
+        margin-bottom: 65px
+        font-weight: 500
+        transform: translateY(0)
+        overflow: hidden
+        transition: tranY-animate
+        animation-name: tranY-animate
+        animation-duration: 1s
+        animation-timing-function: linear
+
+        @keyframes tranY-animate 
+          0%
+            opacity: 0
+            transform: translateY(100px)
+
+          100%
+            opacity: 1
+            transform: translateY(0)
+
+      .h1-sub
+        font-weight: 500
+        font-size: 14px
+        color: $white
+        letter-spacing: 0.08em
+        text-transform: uppercase
+
+      .h2-sub
+        font-weight: 500
+        font-size: 16px
+        line-height: 1.5
+        color: $white
+        letter-spacing: 0.08em
+        text-transform: uppercase
+        display: block
+
+    .button-block
+      margin-top: -2px
+      display: flex
+      justify-content: flex-end
+      column-gap: 55px
+      opacity: 1
+      transition: opacity-animation
+      animation-name: opacity-animation
+      animation-duration: 2.5s
+      animation-delay: 0
+      animation-timing-function: ease-in-out
+
+      @keyframes opacity-animation
+        0%
+          opacity: 0
+        50%
+          opacity: 0
+        100%
+          opacity: 1
+
+      @media (max-width: 1300px)
+        column-gap: 10px
+        justify-content: space-between
+        button
+          width: 40%
+
+  &.services
+    padding:
+      top: 80px
+      bottom: 140px
+
+    @media (max-width: 1300px)
+      padding:
+        top: 60px
+        bottom: 80px
+
+    .services
+
+      &-block
+        .d-flex
+          @media (max-width: 1300px)
+            flex-direction: column
+
+      &-card
+        display: flex
+        background-color: $white
+        border-radius: 4px
+        overflow: hidden
+        margin-right: 15px
+        margin-bottom: 15px
+        height: 220px
+
+        &:hover
+          img
+            transition: transform .3s
+            transform: scale(1.1)
+
+        &--big
+          height: 450px
+
+          @media (max-width: 1300px)
+            height: 300px
+            max-height: 300px
+
+          @media (max-width: 430px)
+            height: fit-content !important
+            max-height: fit-content !important
+
+        &:last-child
+          margin-right: 0
+
+        @media (max-width: 1300px)
+          margin-right: 0
+          height: 220px
+          max-height: 220px
+
+        @media (max-width: 620px)
+          height: 300px
+          max-height: 300px
+          margin-right: 0
+
+        @media (max-width: 430px)
+          height: fit-content
+          max-height: fit-content
+
+        &-text
+          width: 66%
+          padding: 10px 40px
+          display: flex
+          flex-direction: column
+          justify-content: center
+
+          @media (max-width: 1300px)
+            padding: 20px 22px
+
+            display: flex
+            flex-direction: column
+            justify-content: center
+
+          p
+            line-height: 1.62
+            letter-spacing: 0.02em
+            color: $blackSec
+            @media (max-width: 1300px)
+              font-size: 14px
+              line-height: 18px
+        &-title
+          font-size: 24px
+          line-height: 1.3
+          font-weight: 500
+          letter-spacing: 0.01em
+          color: $black
+          margin-bottom: 15px
+
+          @media (max-width: 1300px)
+            font-size: 18px
+
+          @media (max-width: 425px)
+            word-break: break-word
+        &-photo
+          width: 34%
+          overflow: hidden
+          img
+            object-fit: cover
+            height: 100%
+            width: 100%
+
+  &.example
+    background-color: $black
+    padding: 130px 0
+
+    @media (max-width: 1300px)
+      padding: 80px 0
+
+    &--white
+      background-color: #F3F3F3
+      .example
+        &-card
+          &-object
+            .adress
+              color: $blackSec !important
+              svg
+                path
+                  fill: #6E6E6E
+            .name
+              color: $black
+
+          &-price
+            color: $black
+          &-footer
+            border-bottom-color: rgba($blackSec, .5) !important
+
+    &--grey
+      background-color: #e8e8e8
+      .example
+        &-card
+          &-object
+            .adress
+              color: $blackSec !important
+              svg
+                path
+                  fill: #6E6E6E
+            .name
+              color: $black
+
+          &-price
+            color: $black
+          &-footer
+            border-bottom-color: $blackSec !important
+
+    
+    &--project
+      padding-bottom: 120px !important
+      .example
+        @media (max-width: 1023px)
+        &-inner
+          display: -webkit-box
+          width: 100%
+          overflow-x: scroll
+          cursor: grab
+
+          @media (max-width: 1300px)
+            padding-bottom: 50px
+
+          &::-webkit-scrollbar-track
+            -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1)
+            background-color: #E8E8E8
+            border-radius: 10px
+            width: 2px
+
+          &::-webkit-scrollbar
+            width: 2px
+            height: 2px
+            background-color: #E8E8E8
+            border-radius: 10px
+
+          &::-webkit-scrollbar-thumb
+            width: 2px
+            border-radius: 10px
+            -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1)
+            background-color: #6E6E6E
+
+        &-card
+          width: 440px
+          margin-right: 95px
+          margin-bottom: 0
+          @media (max-width: 450px)
+            width: 100%
+          &:last-child
+            margin-right: 0
+
+          
+    .tags
+      margin-bottom: 70px
+      @media (max-width: 1300px)
+        margin-bottom: 50px
+
+    @media (max-width: 1023px)
+      // background-color: #3b3b3b
+      padding:
+        top: 40px
+        bottom: 50px
+
+    .example
+
+      &-block
+        color: $white
+        display: flex
+        margin-bottom: 77px
+
+        @media (max-width: 767px)
+          flex-direction: column
+
+      &-item
+        width: 100%
+        margin-right: 105px
+
+        @media (max-width: 1300px)
+          margin-right: 5%
+        &:last-child
+          margin-right: 0
+
+        @media (max-width: 1023px)
+          margin-right: 5%
+
+        @media (max-width: 767px)
+          margin-right: 0
+          margin-bottom: 40px
+          &:last-child
+            margin-bottom: 0
+
+      &-card
+        display: block
+        margin-bottom: 60px
+
+        &:last-child
+          margin-bottom: 0
+
+        @media (max-width: 767px)
+          margin-bottom: 40px
+          &:last-child
+            margin-bottom: 0
+
+        &-body
+          margin-bottom: 30px
+          position: relative
+          overflow: hidden
+
+          img
+            object-fit: cover
+            width: 100%
+            height: 100%
+            display: flex
+            overflow: hidden
+
+          &:hover
+            img
+              transition: transform .3s
+              transform: scale(1.1)
+            .example-card-hover
+              opacity: 1
+              transition: opacity .4s
+
+        &-hover
+          display: flex
+          justify-content: center
+          align-items: center
+
+          opacity: 0
+          position: absolute
+          top: 0
+          left: 0
+          width: 100%
+          height: 100%
+          background: linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25))
+          transition: opacity .4s
+
+          @media (max-width: 1023px)
+            opacity: 1
+
+          a
+            margin: 0 10px
+            width: 140px
+            height: 48px
+            letter-spacing: 0.08em
+            text-transform: uppercase
+            font-weight: 700
+            color: $white
+            background-color: rgba($white, .25)
+
+            &:hover
+              color: $green
+              border-color: $green
+
+        &-footer
+          display: flex
+          justify-content: space-between
+          padding-bottom: 30px
+          border-bottom: 1px solid rgba($white, .5)
+          position: relative
+
+          @media (max-width: 1023px)
+            border-bottom: none
+
+        &-price
+          text-align: right
+
+          @media (max-width: 1023px)
+            font-size: 14px
+          @media (max-width: 425px)
+            position: absolute
+            top: 0
+            right: 0
+
+          .green
+            color: $green
+            font-size: 14px
+            letter-spacing: 0.05em
+            margin-bottom: 10px
+            @media (max-width: 1023px)
+              display: none
+
+          .price
+            font-weight: 500
+            font-size: 18px
+            line-height: 1.2
+            letter-spacing: 0.02em
+
+            @media (max-width: 1023px)
+              font-size: 14px
+
+        &-object
+          .adress
+            color: $grey
+            font-size: 14px
+            margin-bottom: 6px
+            letter-spacing: 0.05em
+            display: flex
+            align-items: center
+
+            @media (max-width: 1300px)
+              width: 100%
+              display: block
+              align-items: flex-start
+              line-height: 13px
+              margin-bottom: 20px
+
+            @media (max-width: 425px)
+              display: block
+              width: 100%
+
+            svg
+              margin-right: 15px
+
+              @media (max-width: 1300px)
+                margin-top: 0
+
+          .name
+            font-weight: 500
+            @media (max-width: 767px)
+              font-size: 18px
+
+  &.workprice
+    padding: 130px 0
+    overflow: hidden
+    @media (max-width: 1300px)
+      padding: 80px 0
+    .workprice
+      &-block
+        display: flex
+        justify-content: space-between
+
+        @media (max-width: 767px)
+          flex-direction: column
+
+      &-item
+        padding: 50px 45px 60px
+        background-color: $white
+        width: 620px
+        margin-right: 60px
+        display: flex
+        justify-content: space-between
+        flex-direction: column
+
+        overflow: hidden
+        // transform: translate(0, 100px)
+        // opacity: 0
+
+        @media (max-width: 1300px)
+          margin-right: 35px
+          width: 100%
+
+        &:last-child
+          margin-right: 0
+
+        @media (max-width: 767px)
+          margin-right: 0
+          // margin-bottom: 20px
+          width: 100%
+          padding: 24px 32px
+          margin-bottom: 20px
+
+          &:last-child
+            margin-bottom: 0
+
+      &-head
+        text-align: center
+        margin-bottom: 30px
+        svg
+          margin-bottom: 27px
+          @media (max-width: 1300px)
+            margin-bottom: 20px
+            width: 50px
+
+      &-title
+        font-weight: 500
+        font-size: 36px
+        line-height: 1.3
+        @media (max-width: 1300px)
+          font-size: 18px
+
+      &-body
+        margin-bottom: 50px
+
+      &-list
+        &-item
+          padding: 24px 0
+          border-bottom: 1px solid $grey
+          @media (max-width: 1300px)
+            padding: 20px 0
+
+          &:last-child
+            border-bottom: none
+
+          p
+            display: flex
+            justify-content: space-between
+            font-size: 16px
+            line-height: 1.12
+            @media (max-width: 1300px)
+              font-size: 14px
+
+            span
+              font-weight: 500
+              color: $green
+              text-align: right
+              @media (max-width: 1300px)
+                white-space: nowrap
+                margin-left: 15px
+
+      &-footer
+        text-align: center
+        @media (max-width: 425px)
+          a
+            white-space: nowrap
+
+  &.calculator
+    padding: 130px 0
+    background-color: $black
+    @media (max-width: 1300px)
+      padding: 70px 0
+
+  &.advantages
+    padding: 100px 0
+    @media (max-width: 1300px)
+      padding: 80px 0
+
+    .advantages
+
+      &-block
+        margin-bottom: 100px
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr
+        grid-gap: 80px
+
+        @media (max-width: 1300px)
+          grid-template-columns: 1fr 1fr 1fr
+          grid-gap: 30px
+          margin-bottom: 40px
+
+        @media (max-width: 767px)
+          grid-template-columns: 1fr
+
+      &-item
+        // opacity: 0
+
+      &-header
+        display: flex
+        flex-direction: column
+        font-weight: 500
+        font-size: 18px
+        line-height: 1.2
+        margin-bottom: 30px
+        svg
+          margin-bottom: 30px
+          max-height: 46px
+          height: 46px
+
+      &-body
+        p
+          font-size: 14px
+          line-height: 1.57
+          letter-spacing: 0.02em
+
+  &.gift
+    background-position: 50% 50%
+    background-size: cover
+    background-repeat: no-repeat
+    @media (max-width: 1300px)
+      background-position: 100% 50%
+    .gift
+      &-block
+        width: 715px
+        padding: 65px 110px 30px 110px
+        background: rgba($black, .99)
+
+        @media (max-width: 1300px)
+          width: 100%
+          padding: 110px 22px 25px
+
+        p.category
+          @media (max-width: 1300px)
+            margin-bottom: 30px !important
+
+      &-title
+        font-weight: 500
+        font-size: 42px
+        line-height: 1.3
+        color: $white
+        letter-spacing: 0.01em
+        padding-bottom: 30px
+        margin-bottom: 35px
+        border-bottom: 1px solid rgba($white, .5)
+        padding-left: 1px
+
+        overflow: hidden
+        // opacity: 0
+        span
+          color: $green
+          text-transform: uppercase
+
+        @media (max-width: 1300px)
+          font-size: 24px
+          margin-bottom: 25px
+          padding-bottom: 20px
+
+      &-condition
+        @include subHeaderSec
+        color: $white
+        margin-bottom: 90px
+        @media (max-width: 1300px)
+          margin-bottom: 40px
+
+      &-request
+        display: flex
+        justify-content: space-between
+        align-items: flex-start
+        margin-bottom: 60px
+        padding-left: 1px
+        @media (max-width: 1300px)
+          flex-wrap: wrap
+          flex-direction: column
+          justify-content: center
+          margin-bottom: 0
+
+        button
+          white-space: nowrap
+          width: 270px
+          margin-bottom: 45px
+
+          @media (max-width: 1300px)
+            margin-bottom: 20px
+            width: 50%
+            max-width: 270px
+          @media (max-width: 425px)
+            width: 100%
+
+      &-callorder
+        display: flex
+        justify-content: space-between
+        align-items: center
+        width: 190px
+        @media (max-width: 1300px)
+          width: auto
+
+        svg
+          margin-right: 20px
+          max-width: 41px
+          width: 100%
+          height: 41px
+          @media (max-width: 1300px)
+            width: 35px
+
+        p
+          font-weight: bold
+          font-size: 15px
+          line-height: 1.37
+          letter-spacing: 0.02em
+          color: $white
+          @media (max-width: 1300px)
+            font-size: 14px
+            white-space: nowrap
+          a
+            text-decoration-line: underline
+
+  &.offer
+    padding: 165px 0 125px
+    @media (max-width: 1300px)
+      padding: 80px 0
+    .offer
+      &-block
+        display: flex
+        justify-content: space-between
+        @media (max-width: 1300px)
+          flex-direction: column
+
+      &-item
+        width: 425px
+        &:last-child
+          order: 1
+        @media (max-width: 1300px)
+          width: 100%
+          order: 2
+
+        h3
+          @media (max-width: 1300px)
+            margin-bottom: 20px
+
+        button
+          @media (max-width: 425px)
+            width: 100%
+
+        &:last-child
+          width: 640px
+          margin-top: -60px
+          @media (max-width: 1300px)
+            margin-bottom: 65px
+            width: 100%
+            order: 1
+            margin-top: 0
+
+        iframe
+          width: 100%
+          height: 425px
+
+  &.feedback
+    background-position: 50% 50%
+    background-size: cover
+    background-repeat: no-repeat
+    .feedback
+      &-block
+        display: flex
+        justify-content: space-between
+
+        @media (max-width: 1300px)
+          flex-direction: column
+
+      &-items
+
+        .swiper-wrapper
+          @media (max-width: 1300px)
+            padding-bottom: 55px !important
+
+        &:first-child
+          width: 435px
+
+          @media (max-width: 1300px)
+            width: 100%
+
+          p.category
+            color: $grey
+            margin-bottom: 110px
+            padding-top: 148px
+
+            @media (max-width: 1300px)
+              margin-bottom: 30px
+
+          h2
+            font-weight: 500
+            letter-spacing: 0.02em
+            font-size: 55px
+            line-height: 1.2
+            text-align: left
+
+            @media (max-width: 1300px)
+              font-size: 36px
+              margin-bottom: 30px
+
+        &:last-child
+          padding: 145px 90px
+          background-color: rgba(0,0,0,.6)
+          width: 605px
+
+          @media (max-width: 1300px)
+            width: 100%
+            padding: 60px 15px
+
+      &-owner
+        display: flex
+        align-items: center
+
+        img
+          border-radius: 50%
+          width: 51px
+          height: 51px
+          display: block
+          margin-right: 20px
+
+        &-data
+          .name
+            font-weight: 500
+            font-size: 16px
+            line-height: 1.2
+            letter-spacing: 0.05em
+            text-transform: uppercase
+            color: $white
+            margin-bottom: 10px
+
+          .work-done
+            color: $grey
+            font-size: 14px
+            line-height: 1
+            letter-spacing: 0.05em
+
+  &.news
+    padding: 130px 0
+    .container
+      &:last-child
+        @media (max-width: 1300px)
+          margin-left: 0 !important
+
+    .news
+      &-list
+        overflow: hidden
+        overflow-x: auto
+
+        &::-webkit-scrollbar
+          width: 2px
+          height: 2px
+          background-color: #E8E8E8
+
+        &::-webkit-scrollbar-thumb
+          background: #6E6E6E
+          border-radius: 2px
+
+      &-block
+        display: inline-flex
+        gap: 95px
+        margin-bottom: 10px
+
+        position: relative
+        width: 100%
+        overflow-x: scroll
+        overflow-y: hidden
+        white-space: nowrap
+        transition: all 0.2s
+        will-change: transform
+        user-select: none
+        cursor: grab
+
+        &::-webkit-scrollbar-track
+          -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1)
+          background-color: #E8E8E8
+          border-radius: 10px
+          width: 2px
+
+        &::-webkit-scrollbar
+          width: 2px
+          height: 2px
+          background-color: #E8E8E8
+          border-radius: 10px
+
+        &::-webkit-scrollbar-thumb
+          width: 2px
+          border-radius: 10px
+          -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1)
+          background-color: #6E6E6E
+
+        &.active
+          cursor: grabbing
+          cursor: -webkit-grabbing
+          position: relative
+          z-index: 99
+
+          .news-item
+            cursor: grabbing
+
+        @media (max-width: 768px)
+          gap: 15px
+
+      &-item
+        display: flex
+        flex-direction: column
+        width: 315px
+        min-width: 315px
+        max-width: 315px
+
+        @media (max-width: 1300px)
+          max-width: 315px
+          min-width: 315px
+          margin-right: 15px
+          &:last-child
+            margin-right: 0
+
+        img
+          width: 100%
+          object-fit: cover
+          display: flex
+          margin-bottom: 30px
+
+      &-footer
+        display: flex
+        justify-content: space-between
+        margin-bottom: 15px
+
+      &-type
+        font-weight: 500
+        font-size: 14px
+        line-height: 1.43
+        letter-spacing: 0.05em
+        text-transform: uppercase
+        color: $green
+
+      &-date
+        font-weight: 500
+        font-size: 14px
+        line-height: 1.43
+        text-align: right
+        letter-spacing: 0.05em
+        text-transform: uppercase
+        color: $blackSec
+
+      &-title
+        line-height: 1.5
+        margin-bottom: 45px
+
+  &.charger
+    padding: 120px 0
+    background-position: 50% 50%
+    background-repeat: no-repeat
+    background-size: cover
+
+    @media (max-width: 1300px)
+      padding: 50px 0
+
+    .charger
+      &-block
+        width: 700px
+
+        @media (max-width: 1300px)
+          width: 100%
+
+        h2
+          text-align: left
+          color: $white
+          margin-bottom: 30px
+
+          @media (max-width: 1300px)
+            margin-bottom: 20px
+        p
+          margin-bottom: 30px
+
+        @media (max-width: 425px)
+          button
+            width: 100%
+
+  &.application
+    padding: 66px 0
+    background-position: 50% 50%
+    background-size: cover
+    background-repeat: no-repeat
+    .application
+      &-block
+        display: flex
+        gap: 230px
+        align-items: center
+        justify-content: space-between
+
+      &-item
+        &:first-child
+          width: 540px
+          @media (max-width: 1300px)
+            width: 100%
+
+        &:last-child
+          @media (max-width: 1300px)
+            display: none
+
+        h2
+          padding-bottom: 20px
+          border-bottom: 1px solid $grey
+          margin-bottom: 30px
+          text-align: left
+          display: inline-block
+
+          @media (max-width: 1300px)
+            display: block
+            br
+              display: none
+
+        img
+          margin-right: 100px
+
+        p.category
+          margin-bottom: 50px
+
+      &-list
+        margin-bottom: 70px
+        @media (max-width: 1300px)
+          margin-bottom: 50px
+
+        &-item
+          @include subHeaderSec
+          color: $white
+          display: flex
+          align-items: center
+          margin-bottom: 25px
+
+          &:last-child
+            margin-bottom: 0
+
+          svg
+            min-width: 23px
+            margin-right: 28px
+
+      &-btns
+        display: flex
+        gap: 48px
+
+        @media (max-width: 1300px)
+          flex-direction: column
+          gap: 0
+
+        button
+          display: flex
+          align-items: center
+          line-height: 1.2
+
+          @media (max-width: 1300px)
+            max-width: 270px
+            width: 270px
+            margin-bottom: 25px
+            &:last-child
+              margin-bottom: 0
+
+          @media (max-width: 425px)
+            width: 100%
+            max-width: 100%
+
+          svg
+            margin-right: 15px
+
+  &.faq
+    padding: 130px 0
+
+    @media (max-width: 1300px)
+      padding: 80px 0
+
+    .faq
+      &-block
+        display: flex
+        justify-content: space-between
+
+        @media (max-width: 1300px)
+          flex-direction: column
+      &-item
+        &:first-child
+          width: 315px
+          @media (max-width: 1300px)
+            width: 100%
+            margin-bottom: 40px
+
+        &:last-child
+          width: 860px
+          @media (max-width: 1300px)
+            width: 100%
+
+          @media (max-width: 425px)
+            button
+              width: 100%
+
+        h2
+          text-align: left
+          margin-bottom: 30px
+
+        p.category
+          margin-bottom: 50px
+          font-size: 16px
+
+        p
+          @media (max-width: 1300px)
+            font-size: 14px
+
+  &.crypto
+    background: #000
+    @media (max-width: 1300px)
+      padding: 60px 0 0
+    .crypto
+      &-block
+        display: flex
+        justify-content: space-between
+        align-items: center
+
+        @media (max-width: 1300px)
+          flex-direction: column
+
+      &-item
+        h2
+          text-align: left
+          margin-bottom: 30px
+        &:first-child
+          width: 560px
+          @media (max-width: 1300px)
+            width: 100%
+
+  &.steps
+    padding: 130px 0
+
+    @media (max-width: 1300px)
+      padding: 50px 0
+
+    .category
+      @media (max-width: 1300px)
+        display: none
+    .steps
+
+      &-block
+        display: flex
+        justify-content: space-between
+
+        @media (max-width: 767px)
+          flex-direction: column
+
+        &:first-child
+          margin-bottom: 100px
+          @media (max-width: 1300px)
+            margin-bottom: 50px
+
+      &-item
+        &:first-child
+          width: 530px
+
+          @media (max-width: 767px)
+            width: 100%
+
+        &:last-child
+          width: 640px
+
+          @media (max-width: 767px)
+            width: 100%
+
+        p
+          margin-bottom: 15px
+          a
+            color: $green
+            &:hover
+              text-decoration: underline
+          &:last-child
+            margin-bottom: 0
+
+      &-list
+        display: flex
+
+        @media (max-width: 1300px)
+          flex-wrap: wrap
+          justify-content: center
+
+        li
+          margin-right: 15px
+          padding: 30px 17px
+          background-color: $white
+          border-radius: 4px
+          display: flex
+          justify-content: flex-wrap
+          align-items: center
+          flex-direction: column
+          width: 205px
+
+          &:last-child
+            margin-right: 0
+            @media (max-width: 1300px)
+              margin-right: 5px
+
+          @media (max-width: 1300px)
+            margin: 0 5px 16px 5px
+            padding: 20px 10px
+
+          @media (max-width: 430px)
+            width: 160px
+
+        &-image
+          display: flex
+          margin-bottom: 20px
+
+        &-body
+          display: flex
+          flex-direction: column
+          text-align: center
+          p
+            &:first-child
+              text-transform: uppercase
+              color: #949494
+              font-size: 12px
+              letter-spacing: 0.03em
+              margin-bottom: 15px
+            &:last-child
+              font-weight: 500
+              font-size: 14px
+              letter-spacing: 0.02em
+              line-height: 1.2
+              color: $black
+
+  &.blueprints
+    padding: 100px 0
+    background-color: #fff
+
+  &.text
+    padding: 130px 0
+    background-color: #E8E8E8
+
+    @media (max-width: 1300px)
+      padding: 80px 0
+    .text
+      &-block
+        display: flex
+        justify-content: space-between
+
+        @media (max-width: 430px)
+          flex-direction: column
+      &-item
+        &:first-child
+          width: 600px
+
+          @media (max-width: 767px)
+            width: 45%
+          @media (max-width: 430px)
+            width: 100%
+            order: 2
+          p
+            width: 315px
+            @media (max-width: 767px)
+              width: 45%
+            @media (max-width: 430px)
+              width: 100%
+
+        &:last-child
+          width: 640px
+          @media (max-width: 767px)
+            width: 45%
+          @media (max-width: 430px)
+            width: 100%
+            order: 1
+            margin-bottom: 40px
+          img
+            margin-left: auto
+            display: block
+            @media (max-width: 430px)
+              display: none
+
+  &.instagram
+    padding: 130px 0
+    background-color: $black
+
+    @media (max-width: 1300px)
+      padding: 70px 0 130px
+    .instagram
+      &-block
+        display: flex
+        justify-content: space-between
+
+        @media (max-width: 1300px)
+          display: -webkit-box
+          overflow-x: scroll
+          padding-bottom: 20px
+
+      &-post
+        width: 275px
+
+        img
+          width: 100%
+          display: block
+          object-fit: cover
+          margin-bottom: 20px
+
+        @media (max-width: 1300px)
+          margin-right: 25px
+          &:last-child
+            margin-right: 0
+
+      &-data
+        display: flex
+        justify-content: space-between
+        align-items: center
+        color: $grey
+        margin-bottom: 15px
+        span
+          &:first-child
+            font-size: 14px
+            display: flex
+            align-items: center
+          &:last-child
+            font-size: 12px
+            font-weight: 500
+            text-transform: uppercase
+            white-space: nowrap
+
+      &-comment
+        color: $white
+        font-size: 16px
+
+  &.overhaul
+    padding: 100px 0
+
+    @media (max-width: 1300px)
+      padding: 70px 0
+
+    .overhaul
+      &-block
+        display: flex
+        justify-content: space-between
+
+        @media (max-width: 767px)
+          flex-direction: column
+
+      &-item
+        button
+          @media (max-width: 430px)
+            width: 100%
+        &:first-child
+          width: 640px
+          @media (max-width: 1300px)
+            width: 45%
+          @media (max-width: 767px)
+            width: 100%
+            margin-bottom: 50px
+        &:last-child
+          width: 530px
+          @media (max-width: 1300px)
+            width: 45%
+          @media (max-width: 767px)
+            width: 100%
+
+        img
+          object-fit: cover
+          height: 100%
+
+      &-list
+        padding-top: 90px
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        margin-bottom: 20px
+
+        &-item
+          width: 300px
+          display: flex
+          align-content: flex-start
+          margin-bottom: 75px
+
+          @media (max-width: 1300px)
+            margin-bottom: 40px
+            width: 100%
+          // @media (max-width: 767px)
+          //   width: 100%
+
+          svg
+            margin-right: 20px
+
+  &.work
+    padding: 100px 0
+    background-color: #e8e8e8
+
+    @media (max-width: 1300px)
+      padding: 50px 0
+
+    .work
+
+      &-list
+        display: flex
+        flex-wrap: wrap
+        justify-content: center
+        gap: 1px
+        &-item
+          position: relative
+          
+          height: 265px
+          width: 430px
+
+          @media (max-width: 1300px)
+            width: 33%
+          
+          @media (max-width: 1023px)
+            width: 49%
+
+          @media (max-width: 430px)
+            min-height: 100px
+            height: 100px
+
+          .title
+            position: relative
+            z-index: 2
+            padding: 70px 40px
+
+            display: flex
+            flex-direction: column
+            color: $white
+            font-weight: 500
+            font-size: 24px
+            line-height: 1.2
+            letter-spacing: 0.02em
+
+            @media (max-width: 767px)
+              font-size: 14px
+
+            @media (max-width: 430px)
+              padding: 10px
+
+            span
+              &:first-child
+                font-size: 14px
+                font-weight: 400
+                margin-bottom: 20px
+
+                @meida (max-width: 767px)
+                  font-size: 12px
+                  margin-bottom: 10px
+
+          img
+            height: 100%
+            width: 100%
+            object-fit: cover
+            position: absolute
+            z-index: 1
+            filter: brightness(0.5)
+
+          &:last-child
+            padding: 65px 35px
+            background-color: #3E9E57
+            border-color: $white
+            display: flex
+            flex-direction: column
+            justify-content: center
+
+            @media (max-width: 1023px)
+              width: 100%
+
+            @media (max-width: 430px)
+              min-height: 160px
+              padding: 30px 10px
+
+            p
+              text-align: center
+              font-size: 24px
+              font-weight: 500
+              line-height: 1.2
+              color: $white
+
+              @media (max-width: 430px)
+                font-size: 18px
+                margin-bottom: 20px !important
+
+  &.timeline
+    padding: 130px 0
+
+    @media (max-width: 1300px)
+      padding: 60px 0
+
+    .timeline
+      &-list
+        position: relative
+        height: 660px
+
+        @media (max-width: 1300px)
+          height: auto
+          display: flex
+          flex-direction: column
+
+        &:after
+          content: ''
+          position: absolute
+          top: 0
+          left: 50%
+          z-index: -1
+          margin-left: -1px
+          height: 100%
+          width: 1px
+          background-color: $grey
+
+          @media (max-width: 1300px)
+            left: 0
+
+        &-item
+          padding: 70px 100px 50px 0
+          width: 650px
+          border-bottom: 1px solid $grey
+          transform: translate(0%, -50%)
+          position: relative
+
+          @media (max-width: 1300px)
+            transform: none
+            width: 100%
+            padding: 30px 0 30px 25px
+
+          &--right
+            padding: 70px 0 50px 100px
+            transform: translate(100%, 0%)
+            @media (max-width: 1300px)
+              transform: none
+              padding-left: 25px
+
+          &:nth-child(3)
+            transform: translate(100%, -100%)
+            @media (max-width: 1300px)
+              transform: none
+          &:nth-child(4)
+            transform: translate(0%, -150%)
+            @media (max-width: 1300px)
+              transform: none
+          &:nth-child(1)
+            padding-top: 0
+            &::after
+              content: ''
+              position: absolute
+              bottom: -8px
+              left: -8px
+              z-index: 2
+              width: 16px
+              height: 16px
+              background-color: $green
+              border-radius: 50%
+
+      &-data
+        &-stage
+          font-weight: 500
+          font-size: 14px
+          line-height: 1.43
+          letter-spacing: 0.05em
+          text-transform: uppercase
+          color: #6E6E6E
+          margin-bottom: 25px
+
+        &-title
+          font-weight: 500
+          font-size: 24px
+          line-height: 1.2
+          letter-spacing: 0.01em
+          color: #212934
+          margin-bottom: 20px
+          @media (max-width: 430px)
+            font-size: 18px
+
+        p
+          @media (max-width: 430px)
+            font-size: 14px
+
+  &.motto
+    padding: 130px 0
+
+    @media (max-width: 1300px)
+      padding: 60px 0
+
+    .motto
+      &-block
+        display: flex
+        justify-content: space-between
+
+        @media (max-width: 767px)
+          flex-direction: column
+
+      &-item
+        h3
+          @media (max-width: 430px)
+            font-size: 24px
+        &:first-child
+          width: 500px
+          @media (max-width: 1300px)
+            width: 45%
+          @media (max-width: 767px)
+            width: 100%
+            margin-bottom: 40px
+
+          img
+            width: 100%
+            object-fit: cover
+        &:last-child
+          width: 530px
+          display: flex
+          flex-direction: column
+          @media (max-width: 1300px)
+            width: 45%
+          @media (max-width: 767px)
+            width: 100%
+          img
+            margin-bottom: 50px
+            object-fit: cover
+
+            @media (max-width: 767px)
+              order: 2
+              padding-top: 15px
+              margin-bottom: 0
+          h3
+            span
+              color: $green
+
+      &-list
+        margin-bottom: 70px
+        &-item
+          position: relative
+          padding-left: 40px
+          margin-bottom: 30px
+
+          @media (max-width: 430px)
+            font-size: 14px
+
+          &:before
+            content: ''
+            position: absolute
+            left: 0
+            top: 7px
+            width: 10px
+            height: 10px
+            background-color: $green
+            border-radius: 50%
+
+  &.about
+
+    padding: 130px 0
+
+    .about
+      &-block
+        display: flex
+        justify-content: space-between
+
+      &-item
+        &:first-child
+          width: 565px
+
+        .category
+          margin-bottom: 60px
+
+      &-data
+        padding-top: 100px
+        display: flex
+        flex-wrap: wrap
+        margin-bottom: 10px
+        justify-content: space-between
+        &-item
+          width: 265px
+          display: flex
+          align-items: center
+          margin-bottom: 70px
+
+          svg
+            width: 50px
+
+        &-text
+          margin-left: 15px
+          display: flex
+          flex-direction: column
+          span
+            font-weight: 500
+            &:first-child
+              font-size: 12px
+              line-height: 1.7
+              margin-bottom: 5px
+              text-transform: uppercase
+              color: #6E6E6E
+            &:last-child
+              font-size: 18px
+              line-height: 1.2
+
+  &.blog
+    padding: 130px 0 
+
+    .blog
+
+      &-block
+        display: grid
+        grid-template-columns: repeat(auto-fill, 370px)
+        grid-auto-rows: 10px
+        justify-content: center
+        grid-column-gap: 94px
+
+      &-item
+        display: flex
+        flex-direction: column
+        width: 370px
+        padding-bottom: 20px
+        margin-bottom: 40px
+        border-bottom: 1px solid $grey
+        overflow: hidden
+        position: relative
+
+        @media (max-width: 430px)
+          width: 100%
+
+
+
+        &-img
+          margin-bottom: 30px
+          overflow: hidden
+          img
+            transition: all .3s
+            height: 100%
+            width: 100%
+            object-fit: cover
+
+        &:hover
+          .blog-item-img
+            img
+              transform: scale(1.1)
+              transition: transform .3s
+
+        &--main
+          grid-row-end: span 46
+          grid-column: 1 / -2
+          width: 100%
+          padding-bottom: 0
+          border-bottom: 0
+
+          .blog
+            &-item
+              &-img
+                position: absolute
+                z-index: -1
+                overflow: hidden
+                height: 100%
+
+            &-data
+              &-category, &-date
+                color: $white
+            &-title
+              position: absolute
+              top: 50%
+              tranform: translateX(-50%)
+              color: $white
+              font-size: 24px
+
+        &--small
+           grid-row-end: span 41
+        &--big
+           grid-row-end: span 65
+
+      &-content
+        height: 100%
+        display: flex
+        flex-direction: column
+        padding: 30px
+
+      &-data
+        display: flex
+        justify-content: space-between
+        font-size: 14px
+        line-height: 1.43
+        letter-spacing: 0.05em
+        font-weight: 500
+        margin-bottom: 15px
+
+
+        &-category
+          color: $green
+          text-transform: uppercase
+
+        &-date
+          color: $blackSec
+
+      &-title
+        font-weight: 500
+        font-size: 16px
+        line-height: 1.5
+        letter-spacing: 0.02em
+
+  &.subscribe
+    padding: 100px 0
+    display: flex
+    justify-content: center
+
+    @media (max-width: 1000px)
+      padding: 70px 0
+
+    &--black
+      background-color: $black
+      color: $white
+
+      .category
+        color: $white
+
+    .subscribe
+
+      &-block
+        display: flex
+        justify-content: space-between
+
+        @media (max-width: 1000px)
+          flex-direction: column
+
+      &-item
+        width: 420px
+        margin-right: 120px
+
+        @media (max-width: 1000px)
+          width: 100%
+          &:first-child
+            margin-bottom: 40px
+
+        &:last-child
+          margin-right: 0 
+
+
+
+        .title
+          @include h1
+          color: $white
+          margin-bottom: 25px
+
+          @media (max-width: 1000px)
+            font-size: 36px
+            line-height: 1.2
+
+
+      &-form
+        width: 865px
+        padding: 120px 85px
+        background-color: #e8e8e8
+        border-radius: 8px
+        position: relative
+
+        @media (max-width: 1000px)
+          padding: 100px 30px 60px 30px
+
+        @media (max-width: 1000px)
+          width: 100%
+
+        svg 
+          position: absolute
+          top: -50px
+          left: 50%
+          transform: translateX(-50%)
+
+        .form
+          width: 420px
+          margin: 0 auto
+
+          @media (max-width: 430px)
+            width: 100%
+
+          &-control
+            color: $black
+
+            &:focus
+              border-color: $black
+
+          &-group 
+            > label
+              color: $blackSec
+
+          button
+            width: 100%
+
+  &.content
+    padding-bottom: 80px
+
+    .container
+      width: 865px
+
+      @media (max-width: 767px)
+        width: 100%
+        padding: 0 15px
+
+      h3
+        margin-bottom: 30px
+      h4
+        @include h4
+        font-weight: 500
+
+      ul 
+        margin-left: 20px
+        li
+          list-style: disc
+
+      p
+        margin-bottom: 25px
+
+      .d-flex
+        @media (max-width: 767px)
+          gap: 10px !important
+
+      figure
+        margin-bottom: 50px
+        position: relative
+        figcaption
+          font-style: italic
+          font-size: 16px
+          color: $blackSec
+
+        &.hover
+          .hover
+            &-data
+                width: 100%
+                height: 100%
+                position: relative
+                overflow: hidden
+                margin-bottom: 20px
+
+                &:hover
+                  img
+                    transform: scale(1.05)
+                    transition: transform .3s
+                  .data
+                    opacity: 1
+                    transition: opacity .3s
+                img
+                  display: flex
+                  width: 100%
+                  height: 100%
+                  object-fit: cover
+                  transition: transform .3s
+                .data
+                  position: absolute
+                  top: 0
+                  left: 0
+                  width: 100%
+                  height: 100%
+                  background-color: rgba(#000, .5)
+                  opacity: 0
+                  transition: opacity .3s
+                  display: flex
+                  align-items: center
+                  justify-content: center
+                
+
+        
+      .line
+        height: 1px 
+        width: 100%
+        background-color: rgba($black, .2)
+        margin-bottom: 40px
+
+      .social
+        &-share
+          display: flex
+          flex-direction: column
+          justify-content: center
+          align-items: center
+
+          p
+            display: flex
+            align-items: center
+            font-weight: 500
+            font-size: 18px
+            line-height: 1.2
+            text-align: center
+            letter-spacing: 0.02em
+
+
+    .content
+      &-data
+        display: flex
+        justify-content: space-between
+        font-size: 14px
+        line-height: 1.43
+        letter-spacing: 0.05em
+        font-weight: 500
+        margin-bottom: 30px
+
+        @media (max-width: 430px)
+          flex-direction: column
+
+
+        &-category
+          color: $green
+          text-transform: uppercase
+
+        &-date
+          color: $blackSec
+
+  &.residential
+    padding: 100px 0 130px
+
+    @media (max-width: 1300px)
+      padding: 60px 0 60px
+
+    .residential
+      &-short
+        .residential
+
+          &-block
+            display: flex
+            justify-content: space-between
+
+            @media (max-width: 767px)
+              flex-direction: column
+
+          &-item
+            &:first-child
+              width: 350px
+              @media (max-width: 1150px)
+                width: 47%
+              @media (max-width: 767px)
+                width: 100%
+            &:last-child
+              width: 750px
+              @media (max-width: 1150px)
+                width: 47%
+              @media (max-width: 767px)
+                width: 100%
+              
+            @media (max-width: 767px)
+              .category
+                margin-bottom: 40px
+
+            p
+              margin-top: 20px
+
+      &-deta
+        .residential
+          
+          &-block
+            display: flex
+            justify-content: space-between
+            @media (max-width: 1023px)
+              flex-direction: column
+          
+          &-item
+            .category
+              @media (max-width: 1023px)
+                margin-bottom: 40px
+            &:first-child
+              width: 450px
+              @media (max-width: 1023px)
+                width: 100%
+            &:last-child
+              width: 750px
+              @media (max-width: 1023px)
+                width: 100%
+
+      &-video
+        height: fit-content
+        position: relative
+        display: flex
+        video
+          width: 100%
+          height: auto
+          &[poster]
+            object-fit: cover
+
+        .play
+          background: url('../images/design/icons/play-video.svg')
+          height: 65px
+          width: 65px
+          position: absolute
+          top: 50%
+          left: 50%
+          transform: translate(-50%, -50%)
+          z-index: 99
+          &::after
+            content: ''
+            width: 100%
+            height: 100%
+            position: absolute
+            border: 1px solid $white
+            border-radius: 50%
+            animation: anim 1.5s infinite
+
+            @keyframes anim
+              0%
+                transform: scale3d(1,1,1)
+              50%
+                transform: scale3d(1.5,1.5,1.5)
+              100%
+                transform: scale3d(1,1,1)
+
+          &.hide
+            display: none
+
+      &-detail
+        padding-top: 55px
+        &-item
+          display: flex
+          justify-content: space-between
+          align-items: center
+          padding: 20px 0
+          border-bottom: 1px solid rgba($black, .2)
+          &:first-child
+            border-top: 1px solid rgba($black, .2)
+          span
+            &:last-child
+              font-weight: 500
+              font-size: 18px
+              @media (max-width: 767px)
+                font-size: 14px
+                text-align: right
+            @media (max-width: 767px)
+              font-size: 14px
+
+      &-best
+        display: flex
+        justify-content: space-between
+        @media (max-width: 767px)
+          flex-direction: column
+        &:nth-child(2n+1)
+          .residential
+            &-best
+              &-text
+                order: 1
+                background-color: $black
+                color: $white
+                @media (max-width: 767px)
+                  order: unset
+                &-inner
+                  padding-left: 0
+                  padding-right: 120px
+                  margin-left: auto
+                  @media (max-width: 1300px)
+                    padding: 40px 20px
+                  @media (max-width: 767px)
+                    width: 100%
+
+              &-photo
+                order: 2
+                @media (max-width: 767px)
+                  order: unset
+        &-photo
+          @media (max-width: 767px)
+            display: flex
+          img
+            object-fit: cover
+            width: 100%
+            height: 100%
+
+        &-text
+          background-color: #e8e8e8
+          display: flex
+          align-items: center
+          &-inner
+            width: 650px
+            padding: 110px 0 110px 120px
+            @media (max-width: 1300px)
+              padding: 40px 20px
+            @media (max-width: 767px)
+              width: 100%
+
+          
+        &-photo, &-text
+          width: 50%
+          @media (max-width: 767px)
+            width: 100%
+
+  &.vacancies
+    padding: 0 0 130px
+
+    .tags
+      margin-bottom: 70px
+
+    .vacancies
+      &-list
+        margin-bottom: 80px
+        &-item
+          border-bottom: 1px solid rgba($black, .2)
+          padding: 50px 0
+          display: flex
+          @media (max-width: 767px)
+            flex-direction: column
+          @media (max-width: 1300px)
+            &:nth-child(2)
+              border-top: 1px solid rgba($black, .2)
+              
+          &--header
+            font-size: 14px
+            font-weight: 500
+            text-transform: uppercase
+            padding: 12px 0
+            @media (max-width: 1300px)
+              display: none
+            .vacancy
+              &-detail
+                &-town, &-published
+                  font-size: 14px
+                  color: $blackSec
+    .vacancy
+      &-data
+        width: 60%
+        .btn
+          @media (max-width: 450px)
+            width: 100%
+        @media (max-width: 767px)
+          width: 100%
+          order: 2
+        &-title
+          @include h4
+          font-weight: 500
+          margin-bottom: 20px
+        &-text
+          margin-bottom: 40px
+          a
+            color: $green
+            text-decoration: underline
+      &-detail
+        display: flex
+        justify-content: space-between
+        width: 40%
+        @media (max-width: 767px)
+          width: 100%
+          order: 1
+          margin-bottom: 30px
+        .d-flex
+          flex-direction: column
+        &-town, &-published
+          font-size: 18px
+          font-weight: 500
+          
+        &-published
+          color: $blackSec
+          &.show-mobile
+            text-align: right
+            font-size: 12px
+            font-weight: 500
+            margin-bottom: 5px
+            text-transform: uppercase
+            @media (min-width: 1300px)
+              display: none
+        &-town
+          padding: 0 125px
+          @media (max-width: 1090px)
+            padding: 0
+          &.show-mobile
+            font-size: 12px
+            font-weight: 500
+            margin-bottom: 5px
+            text-transform: uppercase
+            @media (min-width: 1300px)
+              display: none
+
+  &.vacancy
+    padding: 60px 0
+    position: relative
+    
+    .container
+      display: flex
+      justify-content: space-between
+      padding: 40px 0
+      border-bottom: 1px solid rgba($black, .2)
+      &:first-child
+        padding-top: 0
+      &:last-child
+        border-bottom: none
+
+
+      @media (max-width: 1110px)
+        flex-direction: column
+
+    .vacancy
+
+      &-text
+        width: 75%
+        @media (max-width: 1110px)
+          order: 2
+          width: 100%
+        p
+          margin-bottom: 15px
+      &-additional
+        width: 20%
+        @media (max-width: 1110px)
+          order: 1
+          width: 100%
+        .footer-social-block
+          justify-content: unset
+          @media (max-width: 1110px)
+            position: absolute
+            bottom: 0
+            left: 50%
+            transform: translateY(-50%)
+            transform: translateX(-50%)
+          span
+            color: $green
+            text-transform: uppercase
+            font-size: 14px
+            font-weight: 500
+            margin-right: 35px
+            @media (max-width: 1300px)
+              display: flex
+      &-data
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        padding: 50px 30px
+        background-color: #e8e8e8
+        margin-bottom: 38px
+        &-item
+          margin-bottom: 40px
+          display: flex
+          flex-direction: column
+          &:last-child
+            margin-bottom: 0
+          span
+            &:first-child
+              font-size: 14px
+              line-height: 1.4
+              text-align: center
+              letter-spacing: 0.05em
+              text-transform: uppercase
+              color: $blackSec
+              margin-bottom: 15px
+
+            &:last-child
+              font-weight: 500
+              font-size: 18px
+              line-height: 1.2
+              text-align: center
+              letter-spacing: 0.02em
+              color: $black
+      &-form
+        display: none
+        opacity: 0
+        transition: opacity .3s
+        &.show
+          display: block
+          opacity: 1
+          transition: opacity .3s
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,263 @@
+.footer
+  background-color: #282828
+  color: $white
+
+  .btn
+    padding:
+      top: 16px
+      bottom: 16px
+
+  &-main
+    display: flex
+    justify-content: space-between
+    padding: 50px 0 62px
+
+    @media (max-width: 1300px)
+      flex-direction: column
+      padding-bottom: 50px
+
+    &-block
+      @media (max-width: 1300px)
+        display: block
+        text-align: center
+        button
+          display: block
+          margin: 0 auto
+      &--services
+        @media (max-width: 1300px)
+          display: none
+      
+
+    .logo
+      display: block
+      width: 65px
+      height: 64px
+      mask: url('../images/design/logo-black.svg') 50% 50% no-repeat
+      mask-size: contain
+      background-color: $white
+      margin-bottom: 43px
+      
+      @media (max-width: 1300px)
+        margin:
+          left: auto
+          right: auto
+
+      &:hover
+        background-color: $green
+
+    .copyright
+      font-size: 12px
+      letter-spacing: 0.05em
+      color: $grey
+
+      @media (max-width: 1300px)
+        display: none
+
+    .sitemap
+      font-size: 12px
+      color: $grey
+      text-decoration: underline
+      margin-bottom: 20px
+      letter-spacing: 0.05em
+
+      @media (max-width: 1300px)
+        display: none
+
+
+    &-title
+      font-size: 16px
+      line-height: 1.5
+      text-transform: uppercase
+      letter-spacing: 0.08em
+      font-weight: 500
+      margin-bottom: 32px
+
+    &-nav
+      display: grid
+      grid-template-columns: 1fr 1fr
+      justify-content: space-between
+      column-gap: 65px
+      row-gap: 22px
+
+      &-item
+        font-size: 14px
+        letter-spacing: 0.03em
+
+        &:nth-child(2n)
+          margin-left: 30px
+        
+        a
+          display: block
+
+  &-phone, &-adress
+    font-size: 14px
+    line-height: 1.42
+    letter-spacing: 0.03em
+    a
+      display: block
+
+  &-adress
+    @media (max-width: 1300px)
+      margin-bottom: 40px
+
+  &-phone
+    margin-bottom: 25px
+    padding-top: 5px
+
+  &-email
+    font-size: 24px
+    line-height: 1.2
+    text-decoration: underline
+    display: block
+    text-align: center
+    margin-bottom: 40px
+    padding-top: 3px
+
+  &-social
+    display: flex
+
+    &-block
+      display: flex
+      justify-content: space-between
+      align-items: center
+      margin-bottom: 25px
+
+      @media (max-width: 1300px)
+        justify-content: center
+      
+      span
+        font-size: 12px
+        color: $grey
+        letter-spacing: 0.03em
+
+        @media (max-width: 1300px)
+          display: none
+
+    &-item
+      margin-left: 30px
+      a
+        display: block
+
+      &:first-child
+        margin-left: 0
+
+
+  &-sec
+    padding-top: 12px
+    padding-bottom: 15px
+    border-top: 1px solid $grey
+
+    @media (max-width: 1300px)
+      border-top: none
+      padding: 
+        top: 0
+        bottom: 35px
+
+    .container
+      display: flex
+      justify-content: space-between
+      align-items: center
+
+      @media (max-width: 1300px)
+        flex-direction: column
+
+  &-pay
+    display: flex
+    align-items: center
+
+    @media (max-width: 1300px)
+      border-bottom: 1px solid rgba(#ffffff, .2)
+      flex-direction: column
+      width: 100vw
+      padding-bottom: 23px
+      margin-bottom: 34px
+      overflow: hidden
+
+    &-text
+      font-size: 12px
+      text-decoration: underline
+      text-decoration-color: $grey
+      color: $grey
+      margin-right: 25px
+
+      @media (max-width: 1300px)
+        margin-right: 0
+        margin-bottom: 20px
+        text-decoration: none
+
+  &-policy
+    display: flex
+
+    .link
+      display: none
+
+      @media (max-width: 1300px)
+        display: block
+        font-size: 12px
+        line-height: 1
+        color: $grey
+        text-decoration: underline
+        margin-bottom: 20px
+        letter-spacing: 0.05em
+
+    @media (max-width: 1300px)
+      display: flex
+      flex-direction: column
+      text-align: center
+
+    &-link
+      font-size: 12px
+      letter-spacing: 0.05em
+      color: $grey
+      text-decoration: underline
+      text-decoration-color: $grey
+      margin-right: 30px
+      @media (max-width: 1300px)
+        margin-bottom: 15px
+        margin-right: 0
+
+
+      &:last-child
+        margin-right: 0
+
+        @media (max-width: 1300px)
+          margin-right: 0
+
+
+    &-text
+      font-size: 12px
+      letter-spacing: 0.05em
+      margin-right: 30px
+      color: $grey
+
+      @media (min-width: 1300px)
+        display: none
+
+      @media (max-width: 1300px)
+        margin-bottom: 15px
+        margin-right: 0
+
+  .pay-method
+    &-item
+      margin-right: 14px
+
+
+      @media (max-width: 1300px)
+        margin-right: 18px
+        svg
+          &:nth-child(1)
+            width: 36px
+            height: 28px
+          &:nth-child(2)
+            width: 36px
+            height: 28px
+          &:nth-child(3)
+            width: 32px
+            height: 32px
+          &:nth-child(4)
+            width: 20px
+            height: 32px
+            margin-left: -10px
+
+      &:last-child
+        margin: 0

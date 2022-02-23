@@ -1,0 +1,348 @@
+.btn
+	padding: 11px 53px
+	font-weight: 700
+	font-size: 14px
+	letter-spacing: 0.05em
+	color: $white
+	text-transform: uppercase
+	border-width: 1px
+	border-style: solid
+	border-color: transparent
+	border-radius: 4px
+	display: flex
+	align-items: center
+	justify-content: center
+	overflow: hidden
+	position: relative
+
+	&:focus
+		outline: 0
+
+	&:before
+		content: ''
+		display: block
+		position: absolute
+		background: rgba(255,255,255,0.5)
+		width: 60px
+		height: 100%
+		left: 0
+		top: 0
+		opacity: .5
+		filter: blur(30px)
+		transform: translateX(-100px) skewX(-15deg)
+		transition: 0s
+
+	&:after
+		content: ''
+		display: block
+		position: absolute
+		background: rgba(255,255,255,0.5)
+		width: 48px
+		height: 100%
+		left: 30px
+		top: 0
+		opacity: 0
+		filter: blur(5px)
+		transform: translateX(-100px) skewX(-15deg)
+		transition: 0s
+
+	&:hover
+		background: #308050
+		cursor: pointer
+		&:before
+			transform: translateX(500px) skewX(-15deg)
+			opacity: 0.6
+			transition: .7s
+
+		&:after
+			transform: translateX(500px) skewX(-15deg)
+			opacity: 1
+			transition: .7s
+
+	&-transparent
+		background-color: transparent
+		border: none
+		padding: 0
+		margin: 0
+		color: $black
+		&:hover
+			background-color: $green
+			color: $black
+
+	&-simple
+		background: transparent
+		border: 1px solid $white
+		display: inline-block
+		padding: 17px 52px
+		letter-spacing: 0.08em
+		text-transform: uppercase
+		font-weight: 700
+		color: $white
+		&:hover
+			color: $white
+			border-color: $green
+
+		&--green
+			color: $green
+			border-color: $green
+
+			&:hover
+				svg 
+					path
+						fill: $white
+
+		&--grey
+			color: $blackSec
+			border-color: rgba($blackSec, .5)
+
+			&:hover
+				svg 
+					path
+						fill: $white
+
+	&-border
+		border: 1px solid $white
+
+	.w-100
+		width: 100%
+
+	&-primary
+		background-color: $green
+		&:hover
+			color: $white
+
+	&-white
+		background-color: $white
+		color: $green
+
+	&-red
+		color: $white
+		background-color: $red
+		&:hover
+			background-color: darken($red, 10%)
+
+	&-ouline
+		background-color: transparent
+		border-color: rgba($black, .5)
+		color: $black
+		line-height: 13px
+
+	&.navigate
+		padding: 16px 53px
+
+		&:hover
+			color: $green
+			border-color: rgba($green, .5)
+
+		@media (max-width: 425px)
+			width: 100%
+
+	&-border-bottom
+		border-radius: 0
+		padding: 15px 0
+		border-bottom: 1px solid $white
+
+	&.color
+		&--white
+			color: $white
+		&--black
+			color: $black
+
+.burger
+	width: 32px
+	height: 20px
+	position: relative
+	z-index: 99
+	padding: 0
+	margin: 0
+	border: none
+	background-color: transparent
+
+	span
+		height: 2px
+		width: 70%
+		background-color: $black
+		display: block
+		transition: width .4s
+
+		&::before, &::after
+			content: ''
+			position: absolute
+			left: 0
+			height: 2px
+			width: 100%
+			background-color: $black
+			transition: .4s transform
+
+		&::before
+			top: 0
+		&::after
+			bottom: 0
+
+	&:hover
+		span
+			width: 100%
+			transition: width .4s
+			// background-color: $green
+
+			&::before, &::after
+				// background-color: $green
+
+	&.active
+		left: -4px
+
+		span
+			position: absolute
+			top: 10px
+			height: 0
+			width: 0
+			transition: all .4s
+
+			&::before, &::after
+				width: 34px
+				top: -1px
+				transition: .4s transform
+
+			&::before
+				transform: rotate(45deg)
+			&::after
+				transform: rotate(-45deg)
+
+.touchevents
+	.burger
+		&:hover
+			span
+				width: 70%
+
+.custom-btn
+	padding: 15px 5px
+	font-weight: 700
+	font-size: 14px
+	letter-spacing: 0.05em
+	line-height: 13px
+	color: $white
+	text-transform: uppercase
+
+	background: transparent
+	outline: none !important
+	cursor: pointer
+	transition: all 0.3s ease
+	position: relative
+	display: inline-block
+
+.btn-1
+	width: 130px
+	height: 48px
+	padding: 0
+	line-height: 42px
+	border: none
+
+.btn-1 span
+	position: relative
+	display: block
+	width: 100%
+	height: 100%
+
+.btn-1:before,
+.btn-1:after
+	position: absolute
+	content: ""
+	height: 0%
+	width: 1px
+	background: #fff
+
+.btn-1:before
+	right: 0
+	top: 0
+	transition: all 0.1s ease
+
+.btn-1:after
+	left: 0
+	bottom: 0
+	transition: all 0.1s 0.2s ease
+
+.btn-1:hover:before
+	transition: all 0.1s 0.2s ease
+	height: 100%
+
+.btn-1:hover:after
+	transition: all 0.1s ease
+	height: 100%
+
+.btn-1 span:before,
+.btn-1 span:after
+	position: absolute
+	content: ""
+	background: #fff
+
+.btn-1 span:before
+	left: 0
+	top: 0
+	width: 0%
+	height: 1px
+	transition: all 0.1s 0.1s ease
+
+.btn-1 span:after
+	left: 0
+	bottom: 0
+	width: 100%
+	height: 1px
+
+.btn-1 span:hover:before
+	width: 100%
+
+.btn-white
+	transition: .3s
+	position: relative
+	overflow: hidden
+	color: $white
+	&:focus
+		outline: 0
+
+	&:before
+		content: ''
+		display: block
+		position: absolute
+		background: rgba(255,255,255,0.5)
+		width: 60px
+		height: 100%
+		left: 0
+		top: 0
+		opacity: .5
+		filter: blur(30px)
+		transform: translateX(-100px) skewX(-15deg)
+
+	&:after
+		content: ''
+		display: block
+		position: absolute
+		background: rgba(255,255,255,0.5)
+		width: 48px
+		height: 100%
+		left: 30px
+		top: 0
+		opacity: 0
+		filter: blur(5px)
+		transform: translateX(-100px) skewX(-15deg)
+
+	&:hover
+		background: $green
+		cursor: pointer
+		&:before
+			transform: translateX(300px) skewX(-15deg)
+			opacity: 0.6
+			transition: .7s
+
+		&:after
+			transform: translateX(300px) skewX(-15deg)
+			opacity: 1
+			transition: .7s
+
+
+	&.no-hover
+		&:hover
+			background-color: $white
+			color: $green
+
+	&.no-wrap
+		white-space: nowrap 

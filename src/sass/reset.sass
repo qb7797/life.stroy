@@ -1,0 +1,78 @@
+html
+	scroll-behavior: smooth
+	
+html, body, p, h1, h2, h3, h4, ul, article, figure
+	padding: 0
+	margin: 0
+	font-weight: normal
+
+body
+	font-family: $ff
+	font-size: $fs
+	line-height: $lh
+	color: $black
+	letter-spacing: $letterSpacing
+	width: 100%
+	overflow-x: hidden
+	font-display: swap
+	background-color: $bgcolor
+	touch-action: pan-x pan-y
+	text-rendering: optimizeLegibility
+a
+	color: inherit
+
+*,
+*:before,
+*:after
+	box-sizing: border-box
+
+.btn
+	border: none
+
+a,
+.btn,
+button
+	svg
+		transition: all 0.15s ease-in-out
+
+a,
+.btn,
+button,
+button:before,
+button:after,
+a:before,
+a:after
+	font-family: $ff
+	text-decoration: none
+	transition: all 0.15s ease-in-out
+	cursor: pointer
+	outline: none
+
+img
+	max-width: 100%
+
+ul
+	list-style: none
+input
+	font-size: $fs
+	width: 100%
+	overflow-x: hidden
+	font-family: $ff
+	border-radius: 4px
+	
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button
+	-webkit-appearance: none
+	margin: 0
+
+/* Firefox */
+input[type=number]
+	-moz-appearance: textfield
+textarea
+	resize: none
+	width: 100%
+	min-width: 100%
+
+::placeholder
+	// color: $muted

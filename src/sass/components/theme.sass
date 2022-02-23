@@ -1,0 +1,82 @@
+.theme
+  &--black
+    background-color: $black
+
+    .header
+      &-top
+        background-color: $black
+        border-color: rgba($white, .5)
+
+        .lang
+          color: $white
+          &:after
+            background-color: $white
+
+        .logo
+          background-color: $white
+
+
+        .messages
+          &-item
+            &-link
+              svg
+                path
+                  fill: $white
+
+        .btn-transparent
+          &.js-call
+            color: $white
+
+      &-nav
+        &-item
+          &-link
+            color: $white
+            svg
+              path
+                fill: $white
+
+    .burger
+      span
+        background-color: $white
+        &:before, &:after
+          background-color: $white
+
+    .section
+      .tags
+        &-btn
+          border-color: rgba($white, .5)
+          color: $white
+      &.inner-page--title
+        .container
+          border-color: rgba($white, .5)
+        p.category
+          color: $white
+        h1.title
+          color: $white
+
+      &.example
+        background-color: $black
+        .example
+          &-card
+            &-object
+              .adress
+                color: $white !important
+                svg
+                  path
+                    fill: $white
+
+              .name
+                color: $white
+
+            &-price
+              color: $white
+
+            &-footer
+              border-color: rgba(#bdbdbd, .5)
+
+        .btn-simple--grey
+          border-color: rgba($white, .5)
+          color: $white
+
+      &.callback
+        background-color: $white

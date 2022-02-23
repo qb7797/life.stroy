@@ -1,0 +1,106 @@
+{{> components/head title="Страницы проекта"}}
+
+<body>
+  <div class="app">
+    <main>
+      <div class="container">
+        <ul class="index-page">
+          <li>Страницы проекта</li>
+          <li><a href="main.html">Главная</a> <p>✅</p></li>
+          <li><a href="design.html">Дизайн</a> <p>✅</p></li>
+          <li><a href="repair.html">Ремонт</a> <p>✅</p></li>
+          <li><a href="projects.html">Проекты</a> <p>✅</p></li>
+          <li><a href="vacancies.html">Вакансии</a> <p>✅</p></li>
+            <ul>
+              <li><a href="vacancy.html">- Вакансия</a> <p>✅</p></li>
+            </ul>
+          <li><a href="news.html">Блог новостей</a> <p>✅</p></li>
+            <ul>
+              <li><a href="news-single.html">- Новость статья</a> <p>✅</p></li>
+            </ul>
+          <li><a href="">Умный дом</a> <p></p></li>
+          <li><a href="contact.html">Контакты</a> <p>✅</p></li>
+          <li><a href="overview-rc.html">Обзор ЖК/КП</a> <p>✅</p></li>
+        </ul>
+      </div>
+    </main>
+  </div> 
+</body>
+
+
+
+<style>
+
+  .app{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .index-page{
+    padding: 30px 50px;
+    background-color: #fff;
+    border-radius: 7px;
+    width: 600px;
+    margin: 0 auto;
+  }
+
+  @media (max-width: 768px) {
+    .index-page{
+      width: 100%
+    }
+  }
+
+  .index-page li{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 7px;
+  }
+
+  .index-page li:first-child{
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+
+  .index-page li:last-child{
+    margin-bottom: 0;
+  }
+
+  .index-page li p{
+    font-size: 16px;
+    font-style: normal;
+    margin-left: 50px
+  }
+
+  .index-page li a:hover{
+    color: #3E9E57;
+  }
+
+  .index-page li + ul{
+    margin-left: 25px;
+  }
+
+  .index-page li + ul li:first-child{
+    margin-bottom: 7px
+  }
+  .index-page li + ul li:last-child{
+    margin-bottom: 0;
+  }
+
+  .index-page li + ul li a{
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  .legend{
+    font-size: 14px;
+    color: #ccc;
+    text-align: center;
+    padding-top: 20px;
+  }
+</style>
+
+</html>
